@@ -4,6 +4,7 @@ const cors = require('cors');
 const account = require("./routes/account.js");
 const pins = require("./routes/pins.js");
 const client = require('./config/db.js');
+const path = require('path');
 require('dotenv').config()
 // assign port
 const PORT = process.env.PORT || 5000;
@@ -66,11 +67,11 @@ async function run() {
 if (process.env.NODE_ENV === 'production')
 {
   // Set static folder
-  app.use(express.static('frontend/build'));
+  app.use(express.static('client/build'));
   // Serve index.html file if it exists on the server (production)
   app.get('*', (req, res) =>
   {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
 
