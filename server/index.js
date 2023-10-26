@@ -69,10 +69,11 @@ if (process.env.NODE_ENV === 'production')
   // Set static folder
   app.use(express.static('client/build'));
   // Serve index.html file if it exists on the server (production)
-  console.log("Serving index.html file from: " + path.resolve(__dirname, 'client', 'build', 'index.html'));
+  const rootPath = path.join(__dirname, '..'); 
+  console.log("Serving index.html file from: " + path.resolve(rootPath, 'client', 'build', 'index.html'));
   app.get('*', (req, res) =>
   {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(rootPath, 'client', 'build', 'index.html'));
   });
 }
 
