@@ -1,0 +1,119 @@
+.main-page {
+    background-color: rgb(26, 26, 26); /* Set your desired background color */
+    background-image: none; /* Remove any background image */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* This separates the table/buttons and the map */
+}
+  
+.table-buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar {
+    text-align: center; /* To horizontally center inline-block elements */
+    color: #ffac30;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  
+.welcome-message,
+.app-title,
+.logout-button {
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.main-content {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the top of the container vertically */
+  }
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 300px;
+  }
+  
+  .bottom-container {
+    margin-top: auto;
+    margin-left: 50px;
+    position: absolute;
+    bottom: 10%;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .button-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.map-section {
+    width: 100%; /* Set an appropriate width */
+    height: 100%; /* Set an appropriate height */
+  }
+
+  .action-button {
+    background-color: #ffac30; /* Match the button background color from landing page */
+    color: #000000; /* Match the button text color from landing page */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .logout-button {
+    background-color: #ffac30; /* Match the button background color from landing page */
+    color: #000000; /* Match the button text color from landing page */
+    border: none;
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Text styles matching the landing page */
+  .text-element {
+    color: #ffac30; /* Match the text color from landing page */
+    font-size: 18px; /* Match the font size from landing page */
+    /* Other text styles as needed */
+  }
+
+  .table-container {
+    color: #ffac30;
+  }
+
+  table {
+    width: 300px;
+  }
+
+  
+  th:first-child, td:first-child {
+    width: 25%; /* 1st column takes up 25% of the total table width */
+  }
+
+  .table-header th {
+    background-color: #ffac30; /* Set the desired color for the header */
+    color: rgb(0, 0, 0); /* Set the text color for the header */
+  }
+
+  tr:nth-child(odd) {
+    color: black;
+    background-color: #efece7; /* Set the color for odd rows */
+  }
+  
+  tr:nth-child(even) {
+    color: black;
+    background-color: #cfcfcf; /* Set the color for even rows */
+  }
