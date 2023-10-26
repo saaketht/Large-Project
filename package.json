@@ -8,7 +8,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server/index.js",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client & npm install --prefix server & npm start --prefix server &"
+    "heroku-postbuild": "npm install && if [ ! -d ./client/node_modules ]; then npm install --prefix client; fi && npm run build --prefix client && npm start --prefix server"
   },
   "keywords": [],
   "author": "",
