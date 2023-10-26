@@ -8,7 +8,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server/index.js",
-    "heroku-postbuild": "npm install && if [ ! -d ./client/node_modules ]; then npm install --prefix client; fi && npm run build --prefix client && npm start --prefix server"
+    "heroku-postbuild": "npm install && npm install --prefix client; fi && npm run build --prefix client && npm start --prefix server"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +26,8 @@
     "mongodb": "^6.1.0",
     "path": "^0.12.7",
     "path-browserify": "^1.0.1"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
